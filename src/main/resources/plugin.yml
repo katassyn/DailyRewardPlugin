@@ -1,0 +1,20 @@
+name: DailyRewardsPlugin
+version: '${project.version}'
+main: com.maks.dailyrewardsplugin.DailyRewardsPlugin
+api-version: '1.20'
+commands:
+  daily:
+    description: Opens the daily rewards GUI.
+    usage: /daily
+    permission: daily.use
+  editdaily:
+    description: Opens the daily rewards editor for administrators.
+    usage: /editdaily
+    permission: daily.edit
+permissions:
+  daily.use:
+    description: Allows players to claim daily rewards.
+    default: true
+  daily.edit:
+    description: Allows administrators to edit daily rewards.
+    default: op

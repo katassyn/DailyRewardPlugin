@@ -1,0 +1,16 @@
+com\maks\dailyrewardsplugin\DatabaseManager.class
+com\maks\dailyrewardsplugin\PlayerData.class
+com\maks\dailyrewardsplugin\DailyGUIListener.class
+com\maks\dailyrewardsplugin\EditDailyCommand.class
+com\maks\dailyrewardsplugin\MoneyEditContext.class
+com\maks\dailyrewardsplugin\GUIManager.class
+com\maks\dailyrewardsplugin\RewardDefinitionManager.class
+com\maks\dailyrewardsplugin\RewardDefinition.class
+com\maks\dailyrewardsplugin\RewardDefinitionManager$1.class
+com\maks\dailyrewardsplugin\RewardManager.class
+com\maks\dailyrewardsplugin\DailyCommand.class
+com\maks\dailyrewardsplugin\ItemStackSerializer.class
+com\maks\dailyrewardsplugin\AdminGUIListener.class
+com\maks\dailyrewardsplugin\DailyRewardsPlugin.class
+com\maks\dailyrewardsplugin\MoneyEditListener.class
+com\maks\dailyrewardsplugin\PlayerLoginListener.class
