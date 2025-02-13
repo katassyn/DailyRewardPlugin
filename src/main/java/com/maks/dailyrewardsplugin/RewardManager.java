@@ -20,11 +20,11 @@ public class RewardManager {
         PlayerData data = plugin.getDatabaseManager().getPlayerData(player.getUniqueId().toString());
         int currentDay = data.getDailyStreak();
         if(day > currentDay) {
-            player.sendMessage("This reward is not available yet!");
+            player.sendMessage("§cThis reward is not available yet! You are on day §e" + currentDay + "§c.");
             return;
         }
         if(data.getClaimedRewards() != null && data.getClaimedRewards().contains("\"day_" + day + "\":true")) {
-            player.sendMessage("You have already claimed the reward for day " + day + "!");
+            player.sendMessage("§cYou have already claimed the reward for day §e" + day + "§c!");
             return;
         }
         RewardDefinitionManager rdm = plugin.getRewardDefinitionManager();
@@ -60,7 +60,7 @@ public class RewardManager {
 
         if(economy != null && money > 0) {
             economy.depositPlayer(player, money);
-            player.sendMessage("You received $" + money + "!");
+            player.sendMessage("§aYou received §e$" + money + " §afrom your rewards!");
         }
 
         String updatedClaimed = data.getClaimedRewards();
@@ -73,6 +73,6 @@ public class RewardManager {
         data.setClaimedRewards(updatedClaimed);
         plugin.getDatabaseManager().updatePlayerData(data);
 
-        player.sendMessage("You have received the rewards for day " + day + "!");
+        player.sendMessage("§aCongratulations! You have claimed the rewards for day §e" + day + "§a.");
     }
 }

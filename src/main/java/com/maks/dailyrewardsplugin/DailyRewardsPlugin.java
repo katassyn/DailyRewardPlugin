@@ -37,10 +37,11 @@ public class DailyRewardsPlugin extends JavaPlugin {
                 PlayerData data = databaseManager.getPlayerData(p.getUniqueId().toString());
                 int day = data.getDailyStreak();
                 if (data.getClaimedRewards() == null || !data.getClaimedRewards().contains("\"day_" + day + "\":true")) {
-                    p.sendMessage("Reminder: You have unclaimed daily rewards. Use /daily to claim them!");
+                    p.sendMessage("§eReminder: You have unclaimed daily rewards for day §a" + day + "§e! Use §6/daily §eto claim them.");
                 }
             }
-        }, 12000L, 12000L); // co 1200 ticków (1 minuta)
+        }, 6000L, 6000L); // co 1200 ticków (1 minuta)
+
 
     }
 

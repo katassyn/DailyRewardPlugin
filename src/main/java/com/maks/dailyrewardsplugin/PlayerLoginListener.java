@@ -31,6 +31,7 @@ public class PlayerLoginListener implements Listener {
             data.setLastLoginDate(today);
             plugin.getDatabaseManager().updatePlayerData(data);
         }
-        player.sendMessage("Welcome! Your daily check-in has been registered.");
+        player.sendMessage("§a§lWelcome! §7Your daily check-in has been registered. Your current streak is §e"
+                + data.getDailyStreak() + "§7.");
     }
 }
