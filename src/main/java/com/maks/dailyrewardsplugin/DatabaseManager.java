@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class DatabaseManager {
     private DailyRewardsPlugin plugin;
     private HikariDataSource dataSource;
-    private int debuggingFlag = 1; // Set to 0 in production
+    private int debuggingFlag = 0; // Set to 0 in production
 
     public DatabaseManager(DailyRewardsPlugin plugin) {
         this.plugin = plugin;

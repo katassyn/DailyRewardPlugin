@@ -59,13 +59,13 @@ public class PlayerLoginListener implements Listener {
         boolean isPremium = player.hasPermission("daily.premium");
         boolean isDeluxe = player.hasPermission("daily.deluxe");
 
-        plugin.getLogger().info("[DailyRewards] Player " + player.getName() + " logged in with permissions - Premium: " + isPremium + ", Deluxe: " + isDeluxe);
+        //plugin.getLogger().info("[DailyRewards] Player " + player.getName() + " logged in with permissions - Premium: " + isPremium + ", Deluxe: " + isDeluxe);
 
         // Update rank history
         String updatedRankHistory = updateRankHistory(data.getRankHistory(), today, isPremium, isDeluxe);
         data.setRankHistory(updatedRankHistory);
 
-        plugin.getLogger().info("[DailyRewards] Updated rank history for " + player.getName() + " on " + today);
+       // plugin.getLogger().info("[DailyRewards] Updated rank history for " + player.getName() + " on " + today);
 
         if(data.getLastLoginDate() == null || !data.getLastLoginDate().isEqual(today)) {
             if(data.getLastLoginDate() != null && data.getLastLoginDate().isEqual(today.minusDays(1))) {
